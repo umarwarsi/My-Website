@@ -841,7 +841,16 @@
                 $('.navbar').removeClass('scrolled');
             }
         });
-        
+        // Added to home.js
+        $('.carousel-item').hover(
+          function() {
+            $(this).find('img').css('transform', 'scale(1.03)');
+            $(this).find('.carousel-caption').fadeIn(200);
+          }, 
+          function() {
+            $(this).find('img').css('transform', 'scale(1)');
+          }
+        );
         // Smooth scrolling for anchor links
         $('a[href*="#"]').on('click', function(e) {
             e.preventDefault();
